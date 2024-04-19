@@ -1,0 +1,293 @@
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+* {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5em;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+header {
+  margin: 2em 0;
+}
+
+h1 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: large;
+  font-weight: bold;
+  line-height: 4em;
+}
+
+a {
+  text-decoration: none;
+  color: #2F65A7;
+  /* background-color: #f0f0f0; */
+  border-radius: 0.5em;
+  text-shadow: 0.3em 0.3em 0.5em #c0c0c0;
+}
+
+p {
+  /* border: 1px solid #c0c0c0; */
+  background-color: white;
+  padding: 1em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  padding: 1em;
+}
+
+section {
+  padding: 1em 0;
+}
+
+footer {
+  text-align: center;
+  margin: 2em 0;
+  color: #505050;
+  font-size: small;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.skip-to-main {
+  left: -1000px;
+  position: absolute;
+}
+
+.skip-to-main:focus {
+  background-color: #ffcb05;
+  color: black;
+  padding: 0 0.5em;
+  top: 10px;
+  left: 10px;
+  z-index: 99;
+}
+
+.clstr-widget {
+  width: 20px;
+  height: 20px;
+}
+
+/* Aside and header is a one-column grid, and everything is in perfect center*/
+aside,
+header {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+header {
+  margin-top: 8em;
+}
+
+header img {
+  margin: 1em 0;
+  max-width: 10em;
+  border-radius: 50%;
+}
+
+#contact a {
+  padding: 0 0.75em;
+  color: #00274c;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00274c;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+
+nav ul {
+  max-width: 30em;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.active {
+  color: #ffcb05;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 3em;
+}
+
+.project-card {
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0.5em 0.5em 1em #c0c0c0;
+}
+
+.project-card img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.article {
+  padding: 1em 0;
+}
+
+.article-title {
+  font-weight: bold;
+  color: #00274c;
+  padding: 0;
+}
+
+.authors {
+  font-size: small;
+  padding: 0;
+}
+
+.journals {
+  font-size: small;
+  padding: 0;
+  font-style: italic;
+}
+
+#x-light,
+#x-dark {
+  max-width: 500px;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    margin: auto;
+    max-width: 1000px;
+  }
+  aside {
+    display: initial;
+    width: 12em;
+    padding: 2em;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    line-height: 2em;
+  }
+
+  header {
+    margin: auto;
+  }
+
+  header img {
+    border-radius: 50%;
+  }
+
+  #contact a {
+    padding: 0 0.5em;
+  }
+
+  nav {
+    display: initial;
+    color: black;
+    position: initial;
+    background-color: initial;
+    box-sizing: initial;
+  }
+
+  nav ul {
+    display: initial;
+    max-width: 30em;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #00274c;
+    padding: 0.2em 0.5em;
+    background-color: transparent;
+    font-weight: bold;
+    text-shadow: initial;
+  }
+
+  main {
+    margin-left: 18em;
+    padding: 2em;
+  }
+
+  .active {
+    background-color: #00274c;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  * {
+    color: white;
+  }
+
+  html,
+  p {
+    background-color: #00274c;
+  }
+
+  .article-title {
+    color: white;
+  }
+
+  .project-card {
+    border: 1px solid #c0c0c0;
+  }
+
+  nav ul li a {
+    color: white;
+  }
+}
